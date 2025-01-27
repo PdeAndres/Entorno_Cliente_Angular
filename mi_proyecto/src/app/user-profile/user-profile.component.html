@@ -1,0 +1,16 @@
+<p>user-profile works!</p>
+
+<div class="comp-user">
+  <p class="name">Nombre: PEPE</p>
+  <p class="">Role: Jefe</p>
+</div>
+
+<div class="comp-user">
+  <h1>{{ titulo }}</h1>
+  <p class="name">Nombre: {{ nombre }}</p>
+  <p class="role">Role: {{ role }}</p>
+</div>
+
+<h1 [innerHTML]="titulo"></h1>
+
+<input type="button" (click)="seleccionar($event)" />

@@ -1,0 +1,21 @@
+<h1>Componente Alumno</h1>
+<p>Nombre: {{ nombre }}</p>
+<p>Apellido: {{ apellido }}</p>
+<p>Edad: {{ edad }}</p>
+<p>Dni: {{ nuevoDni.value }}</p>
+<p>Edad por 5: {{ multiplicarEdad() }}</p>
+<p>{{ edad >= 18 ? "Mayor de edad" : "Menor de edad " }}</p>
+
+<input type="text" #nuevoDni (keyup)="(0)" [disabled]="deshabilitado" />
+
+<input type="checkbox" [checked]="mayorEdad()" />
+
+<input
+  type="checkbox"
+  [checked]="isChecked"
+  #checkStatus
+  (click)="componenteMarcado()"
+/>
+
+<input type="radio" value="H" (click)="mostrarMensaje($event)" />
+<input type="radio" value="M" (click)="mostrarMensaje($event)" />

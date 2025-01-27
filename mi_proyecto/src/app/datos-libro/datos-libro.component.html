@@ -1,0 +1,24 @@
+<p>{{ titulo }}</p>
+
+<ul>
+  <li><img src="{{ libro.imagen }}" alt="" /></li>
+  <li>{{ libro.titulo }}</li>
+
+  <li>{{ libro.autor }}</li>
+
+  <li>{{ libro.precio }}</li>
+
+  <li [class.aviso]="libro.stock == 0">Stock: {{ libro.stock }}</li>
+
+  <li>{{ libro.cantidad }}</li>
+</ul>
+
+<button id="sumar" (click)="actualizarCantidad($event)">Agregar libro</button>
+
+<button
+  id="restar"
+  (click)="actualizarCantidad($event)"
+  [disabled]="libro.cantidad == 0"
+>
+  Quitar libro
+</button>

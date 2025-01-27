@@ -1,0 +1,57 @@
+<!-- <h1 style="color: red; font-weight: bold">Mi primer proyecto en Angular</h1>
+
+<h1 class="azul">Mi primer proyecto en Angular</h1>
+
+<p>Un saludito!</p>
+
+<img src="./img/favicon.ico" alt="imagen" />
+<h1>Titulo: {{ title }}</h1>
+
+<h3>{{ nombre }}</h3>
+
+<p>{{ getEdad() >= 18 ? "Es mayor de edad" : "Es menor de edad" }}</p>
+
+<app-user-profile></app-user-profile>
+
+<p [class]="naranja">{{ name }}</p>
+<img [src]="imgUrl" alt="" />
+
+<img src="{{ imgUrl }}" alt="" />
+
+<input type="checkbox" [checked]="marcado" />
+<input type="text" [value]="name" [disabled]="deshabilitado" />
+
+<div>{{ asignatura.nombre }}</div>
+
+<div>{{ asignatura.codigo }}</div>
+
+<app-alumno></app-alumno> -->
+
+<input type="text" [value]="nombreComp" />
+<button (click)="mostrarNombre()">Enviar</button>
+<br />
+<input type="text" (keyup)="mostrarMensaje($event)" />
+<p>{{ mensaje }}</p>
+
+<input type="text" [(ngModel)]="nombre" />
+
+<br />
+<hr />
+<input type="text" [value]="name" (keyup)="capturar($event)" />
+<div>{{ name }}</div>
+
+<input type="text" [(ngModel)]="name" />
+
+<br />
+<hr />
+
+<input type="text" [(ngModel)]="texto1" value="{{ texto2.toLowerCase() }}" />
+<input type="text" [(ngModel)]="texto2" value="{{ texto1.toUpperCase() }}" />
+
+<datos-libro></datos-libro>
+
+<app-user-profile
+  nombre="Harry Potter"
+  role="Mago"
+  (selected)="recibirNombre($event)"
+></app-user-profile>
