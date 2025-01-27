@@ -1,0 +1,14 @@
+<input type="number" [(ngModel)]="numero1" />
+
+<input type="number" [(ngModel)]="numero2" />
+<br />
+
+<input type="button" value="Sumar" (click)="sumar()" />
+
+<input type="button" value="Restar" (click)="restar()" />
+
+<input type="button" value="Multiplicar" (click)="multiplicar()" />
+
+<input type="button" value="Dividir" (click)="dividir()" />
+
+<p>{{ resultado }}</p>
