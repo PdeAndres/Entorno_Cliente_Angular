@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { DatosLibroComponent } from './datos-libro/datos-libro.component';
 
 @Component({
-  selector: 'app-hola',
+  selector: 'app-root',
   standalone: true,
   imports: [
     RouterOutlet,
@@ -19,6 +19,7 @@ import { DatosLibroComponent } from './datos-libro/datos-libro.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+  numeroLibro: string = '';
   title: string = 'Clase de Angular';
   nombre: string = 'Pablo de Andrés Olano';
   edad: number = 30;
@@ -58,5 +59,9 @@ export class AppComponent {
 
   recibirNombre(nombre: string) {
     console.log(nombre);
+  }
+
+  mostrarTitulo() {
+    alert();
   }
 }

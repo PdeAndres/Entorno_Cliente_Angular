@@ -48,10 +48,16 @@
 <input type="text" [(ngModel)]="texto1" value="{{ texto2.toLowerCase() }}" />
 <input type="text" [(ngModel)]="texto2" value="{{ texto1.toUpperCase() }}" />
 
-<datos-libro></datos-libro>
-
 <app-user-profile
   nombre="Harry Potter"
   role="Mago"
   (selected)="recibirNombre($event)"
 ></app-user-profile>
+
+<datos-libro
+  numeroLibro="{{ numeroLibro }}"
+  (selected)="mostrarTitulo($event)"
+></datos-libro>
+<br />
+<input type="text" [(ngModel)]="numeroLibro" />
+<button (click)="mostrarTitulo()">Quiero el libro {{ numeroLibro }}</button>
