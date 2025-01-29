@@ -3,7 +3,7 @@
   <label for="">Nombre</label>
   <input type="text" [(ngModel)]="nombre" name="nombre" />
   <label for="">Apellido</label>
-  <input type="text" [(ngModel)]="apellidos" name="nombre" />
+  <input type="text" [(ngModel)]="apellidos" name="apellidos" />
   <input type="button" (click)="registrar()" value="Registrar" />
 </form>
 <p [class]="morado" *ngIf="enviado; else sinAlta">
@@ -12,6 +12,31 @@
 
 <ng-template #sinAlta> Ningun alta </ng-template>
 
-<p *ngFor="let persona of listaPersonas">
-  {{ persona.nombre }} {{ persona.apellidos }} {{ persona.edad }}
+<h1>Lista personas</h1>
+<p *ngFor="let persona of listaPersonas; let index = index">
+  <strong>
+    {{ index }} {{ persona.nombre }} {{ persona.apellidos }}
+    {{ persona.edad }}</strong
+  >
 </p>
+
+<h1>Mayores de 30</h1>
+
+<p *ngFor="let persona of listaPersonas">
+  <span *ngIf="persona.edad >= 30"
+    >{{ persona.nombre }} {{ persona.apellidos }} {{ persona.edad }}</span
+  >
+</p>
+
+<h1>Botones</h1>
+<button (click)="buttonClicked(botonA)">{{ botonA }}</button>
+<button (click)="buttonClicked(botonB)">{{ botonB }}</button>
+<button (click)="buttonClicked(botonC)">{{ botonC }}</button>
+
+<p *ngIf="buttonClick; else noButtonClick">
+  {{ botonClickado }}
+</p>
+<ng-template #noButtonClick>No ha seleccionado ningún boton</ng-template>
+
+<h1>Articulos</h1>
+<app-articulo></app-articulo>

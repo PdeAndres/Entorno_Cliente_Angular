@@ -1,0 +1,11 @@
+<form action="">
+  <label for="">Nombre</label>
+  <input type="text" [(ngModel)]="nombre" name="nombre" />
+  <label for="">Precio</label>
+  <input type="number" [(ngModel)]="precio" name="precio" />
+  <label for="">Unidades</label>
+  <input type="number" [(ngModel)]="unidades" name="unidades" />
+  <input type="button" (click)="comprar()" value="comprar" />
+</form>
+
+<listado-articulos [listaArticulos]="listaArticulos"></listado-articulos>
