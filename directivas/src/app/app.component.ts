@@ -3,17 +3,19 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { ArticuloComponent } from './articulo/articulo.component';
-
-export interface Persona {
-  nombre: string;
-  apellidos: string;
-  edad: number;
-}
+import { Persona } from './model/persona';
+import { ListadoPersonasComponent } from './listado-personas/listado-personas.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule, CommonModule, ArticuloComponent],
+  imports: [
+    RouterOutlet,
+    FormsModule,
+    CommonModule,
+    ArticuloComponent,
+    ListadoPersonasComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -49,5 +51,13 @@ export class AppComponent {
     console.log(boton);
     this.botonClickado = `Ha pulsado el botón ${boton} `;
     this.buttonClick = true;
+  }
+  nombreMarcado: string = '';
+  marcado: boolean = false;
+
+  personaMarcada(persona: Persona) {
+    console.log(persona.nombre);
+    this.nombreMarcado = persona.nombre;
+    this.marcado = true;
   }
 }

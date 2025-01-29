@@ -2,12 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ListadoArticulosComponent } from '../listado-articulos/listado-articulos.component';
+import { Articulo } from '../model/articulo';
 
-export interface Articulo {
-  nombre: string;
-  precio: number;
-  unidades: number;
-}
 @Component({
   selector: 'app-articulo',
   standalone: true,
@@ -20,11 +16,6 @@ export class ArticuloComponent {
   precio: number = 0;
   unidades: number = 0;
 
-  articulo: Articulo = {
-    nombre: '',
-    precio: 0,
-    unidades: 0,
-  };
   listaArticulos: Articulo[] = [
     {
       nombre: 'Ratón',
@@ -44,9 +35,12 @@ export class ArticuloComponent {
   ];
 
   comprar() {
-    this.articulo.nombre = this.nombre;
-    this.articulo.precio = this.precio;
-    this.articulo.unidades = this.unidades;
-    this.listaArticulos.push(this.articulo);
+    let articulo: Articulo = {
+      nombre: this.nombre,
+      precio: this.precio,
+      unidades: this.unidades,
+    };
+
+    this.listaArticulos.push(articulo);
   }
 }

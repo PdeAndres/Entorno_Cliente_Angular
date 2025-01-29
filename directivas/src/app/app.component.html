@@ -40,3 +40,11 @@
 
 <h1>Articulos</h1>
 <app-articulo></app-articulo>
+
+<app-listado-personas
+  *ngFor="let persona of listaPersonas"
+  [persona]="persona"
+  (selected)="personaMarcada($event)"
+></app-listado-personas>
+
+<p *ngIf="marcado">Se ha pulsado {{ nombreMarcado }}</p>

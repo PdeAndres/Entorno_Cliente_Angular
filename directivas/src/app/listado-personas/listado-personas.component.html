@@ -1,0 +1,8 @@
+<li>
+  {{ persona.nombre }} {{ persona.apellidos }} {{ persona.edad }}
+  <span *ngIf="esMenor(); else menorEdad">Mayor de edad</span>
+  <ng-template #menorEdad>
+    <p [ngClass]="{ menor: true }">Menor de edad</p>
+  </ng-template>
+  <input type="radio" name="persona" (click)="personaMarcada()" />
+</li>
