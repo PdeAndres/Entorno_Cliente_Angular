@@ -1,13 +1,7 @@
 <p>planet-list works!</p>
 
-<ul *ngFor="let planeta of (planetList$ | async)?.results">
-  <li>{{ planeta.name }}</li>
-  <li>{{ planeta.rotation_period }}</li>
-  <li>{{ planeta.orbital_period }}</li>
-  <li>{{ planeta.diameter }}</li>
-  <li>{{ planeta.climate }}</li>
-  <li>{{ planeta.gravity }}</li>
-  <li>{{ planeta.terrain }}</li>
-  <li>{{ planeta.surface_water }}</li>
-  <li>{{ planeta.population }}</li>
+<ul>
+  <li *ngFor="let planeta of (planetList$ | async)?.results">
+    {{ planeta.name }}
+  </li>
 </ul>
