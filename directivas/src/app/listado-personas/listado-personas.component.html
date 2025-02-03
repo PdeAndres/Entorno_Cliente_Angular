@@ -2,7 +2,10 @@
   {{ persona.nombre }} {{ persona.apellidos }} {{ persona.edad }}
   <span *ngIf="esMenor(); else menorEdad">Mayor de edad</span>
   <ng-template #menorEdad>
-    <p [ngClass]="{ menor: true }">Menor de edad</p>
+    <span [ngClass]="{ menor: true }">Menor de edad</span>
   </ng-template>
   <input type="radio" name="persona" (click)="personaMarcada()" />
+  <input type="text" [(ngModel)]="persona.nombre" />
+  <input type="text" [(ngModel)]="persona.apellidos" />
+  <input type="text" [(ngModel)]="persona.edad" />
 </li>

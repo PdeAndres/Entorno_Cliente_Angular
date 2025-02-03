@@ -1,11 +1,12 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Persona } from '../model/persona';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-listado-personas',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './listado-personas.component.html',
   styleUrl: './listado-personas.component.css',
 })

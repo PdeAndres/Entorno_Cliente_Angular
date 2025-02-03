@@ -43,6 +43,7 @@
 
 <app-listado-personas
   *ngFor="let persona of listaPersonas"
+  [(ngModel)]="persona"
   [persona]="persona"
   (selected)="personaMarcada($event)"
 ></app-listado-personas>
