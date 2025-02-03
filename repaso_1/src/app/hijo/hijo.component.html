@@ -1,4 +1,4 @@
-<h1>{{ title }}</h1>
+<h1>{{ titulo }}</h1>
 
 <p>Nombre: {{ nombre }}</p>
 <p>Nota: {{ nota }}</p>
@@ -8,10 +8,5 @@
 <input type="number" [(ngModel)]="nuevaNota" />
 
 <input type="button" value="Cambiar nombre" (click)="cambiarNombre()" />
-<input type="button" value="Cambiar nota" (click)="cambiarNota()" />
 
-<app-hijo
-  [nota]="nota"
-  [nombre]="nombre"
-  (selected)="actualizarCampos($event)"
-></app-hijo>
+<input type="button" value="Cambiar nota" (click)="cambiarNota()" />
