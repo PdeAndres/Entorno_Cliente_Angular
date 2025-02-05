@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-list-personaje',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './list-personaje.component.html',
   styleUrl: './list-personaje.component.css',

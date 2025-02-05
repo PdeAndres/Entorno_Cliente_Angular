@@ -36,4 +36,8 @@ export class PersonajeService {
       (personaje) => personaje.id != id
     );
   }
+
+  agregarPersonaje(personaje: Personaje) {
+    this.listaPersonajes.push(personaje);
+  }
 }

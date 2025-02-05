@@ -1,1 +1,9 @@
-<p>add-personaje works!</p>
+<h2>Agregar personaje</h2>
+
+<label for="nombre">Nombre: </label>
+<input type="text" [(ngModel)]="nuevoPersonaje.nombre" />
+
+<label for="nombre">Raza: </label>
+<input type="text" [(ngModel)]="nuevoPersonaje.raza" />
+
+<button (click)="agregarPersonaje()">Agregar</button>
