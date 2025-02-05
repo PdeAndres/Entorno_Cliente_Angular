@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor="let personaje of listaPersonajes$ | async">
+    <p>{{ personaje.id }}</p>
+    <p>{{ personaje.nombre }}</p>
+    <p>{{ personaje.raza }}</p>
+    <button (click)="borrarPersonaje(personaje.id)">Borrar</button>
+  </li>
+</ul>

@@ -7,8 +7,6 @@ import { Planet, PlanetList } from '../model/planet';
   providedIn: 'root',
 })
 export class PlanetasService {
-  planetList$ = new Observable<Planet>();
-
   constructor(private http: HttpClient) {}
 
   getPlanetList(pagina: string = '1'): Observable<PlanetList> {
