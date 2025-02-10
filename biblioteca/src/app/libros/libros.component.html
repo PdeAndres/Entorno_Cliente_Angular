@@ -1,0 +1,9 @@
+<h1>{{ titulo }}</h1>
+
+<ul>
+  <li *ngFor="let libro of listaLibros">
+    <a [routerLink]="['/libros', libro.id]">
+      {{ libro.id }} -- {{ libro.titulo }}</a
+    >
+  </li>
+</ul>
