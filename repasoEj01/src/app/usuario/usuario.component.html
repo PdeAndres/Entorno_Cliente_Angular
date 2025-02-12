@@ -3,9 +3,11 @@
 <button (click)="buscarUsuario()">Buscar Usuario</button>
 
 <h2>Usuario</h2>
-<p>Nombre: {{ (usuario$ | async)?.name }}</p>
-<p>Usuario: {{ (usuario$ | async)?.username }}</p>
-<p>Email: {{ (usuario$ | async)?.email }}</p>
-<p>Calle: {{ (usuario$ | async)?.address?.street }}</p>
-<p>Suite: {{ (usuario$ | async)?.address?.suite }}</p>
-<p>Ciudad: {{ (usuario$ | async)?.address?.city }}</p>
+<div *ngIf="usuario$ | async as usuario">
+  <p>Nombre: {{ usuario.name }}</p>
+  <p>Usuario: {{ usuario.username }}</p>
+  <p>Email: {{ usuario.email }}</p>
+  <p>Calle: {{ usuario.address.street }}</p>
+  <p>Suite: {{ usuario.address.suite }}</p>
+  <p>Ciudad: {{ usuario.address.city }}</p>
+</div>

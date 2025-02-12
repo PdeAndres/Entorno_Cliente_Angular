@@ -12,14 +12,14 @@ import { CommonModule } from '@angular/common';
   templateUrl: './post.component.html',
   styleUrl: './post.component.css',
 })
-export class PostComponent implements OnInit {
+export class PostComponent {
   titulo: string = 'POST';
 
   postList$ = new Observable<Post[]>();
 
   constructor(private usuarioService: UsuarioService) {}
 
-  ngOnInit(): void {
+  pintarPost() {
     this.postList$ = this.usuarioService.getPosts();
   }
 }
