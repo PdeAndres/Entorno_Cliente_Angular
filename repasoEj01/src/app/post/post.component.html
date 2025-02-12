@@ -1,0 +1,16 @@
+<h1>{{ titulo }}</h1>
+
+<table>
+  <thead>
+    <tr>
+      <td>Title</td>
+      <td>Body</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let post of postList$ | async">
+      <td>{{ post.title }}</td>
+      <td>{{ post.body }}</td>
+    </tr>
+  </tbody>
+</table>

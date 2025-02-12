@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common';
 })
 export class PlanetDetailComponent {
   planet$ = new Observable<Planet>();
+
   constructor(private planetService: PlanetasService) {}
 
   ngOnInit(): void {

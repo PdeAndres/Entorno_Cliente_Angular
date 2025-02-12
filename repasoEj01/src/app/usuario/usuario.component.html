@@ -1,0 +1,11 @@
+<h1>Componente Usuario</h1>
+<input type="number" [(ngModel)]="idUsuario" />
+<button (click)="buscarUsuario()">Buscar Usuario</button>
+
+<h2>Usuario</h2>
+<p>Nombre: {{ (usuario$ | async)?.name }}</p>
+<p>Usuario: {{ (usuario$ | async)?.username }}</p>
+<p>Email: {{ (usuario$ | async)?.email }}</p>
+<p>Calle: {{ (usuario$ | async)?.address?.street }}</p>
+<p>Suite: {{ (usuario$ | async)?.address?.suite }}</p>
+<p>Ciudad: {{ (usuario$ | async)?.address?.city }}</p>
